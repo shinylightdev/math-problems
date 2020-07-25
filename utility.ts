@@ -4,11 +4,9 @@
  * @class Utility
  */
 export class Utility {
-  
+      
   constructor() {
-
   }
-
 
   /**
    * Returns a random number from min to max. 
@@ -23,7 +21,3 @@ export class Utility {
     return Math.floor(Math.random() * (max - min + 1)) + min;
   }
 }
-
-
-
-//console.log(Utility.getRandom(0,10));
