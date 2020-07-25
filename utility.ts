@@ -17,7 +17,7 @@ export class Utility {
    * @returns {number}
    * @memberof Utility
    */
-  static getRandom(min: number, max: number): number {
+  public static getRandom(min: number, max: number): number {
     return Math.floor(Math.random() * (max - min + 1)) + min;
   }
 }

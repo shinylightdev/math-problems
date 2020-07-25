@@ -1,12 +1,10 @@
+import { Operand } from './Operand';
 
 /**
  * Options for creating a set of problems. 
  *
  * @class ProblemSetOptions
  */
-
-/// <reference path="Operand.ts" /> 
-namespace MathProblems {  
  export class ProblemSetOptions {
 
   /**
@@ -38,5 +36,4 @@ namespace MathProblems {
    * @memberof ProblemSetOptions
    */
   public Operands: Operand[];
-}
 }

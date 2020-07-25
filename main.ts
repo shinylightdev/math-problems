@@ -1,4 +1,7 @@
 import { Utility } from './utility';
+import { Problem } from './models/Problem';
+import { Operand } from './models/Operand';
+
 // import { Operand } from './operand';
 
 
@@ -45,16 +48,5 @@ let p = new Problem(
         
 console.log(p);
 
-
-
-
-
-//console.log(p.Generate());
-
-
-
-
-
-//console.log(x.Generate());
 
 

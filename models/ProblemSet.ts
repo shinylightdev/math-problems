@@ -1,3 +1,7 @@
+import { Operand } from './Operand';
+import { ProblemSetOptions } from './ProblemSetOptions';
+import { Problem } from './Problem';
+
 /**
  * Set of problems that gets displayed on a page.
  *
@@ -5,7 +9,7 @@
  */
  
  
-namespace MathProblems {
+// namespace MathProblems {
   export class ProblemSet {
 
     constructor(quantity: number, operator: string) {
@@ -39,4 +43,4 @@ namespace MathProblems {
       return problems;
     }
   }
-}
+// }
