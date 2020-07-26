@@ -13,18 +13,25 @@ export class Problem {
     this.WrongAttempts = [];
     this.OperandsGenerated = Operand.resolveOperands(this.Operands);
     this.Answer = this.getAnswer();
+    this.Expression = this.generateExpression();
   }
 
   public Operator: string; // + - / *  
-  private Operands: Operand[];
   public Answer?: number;
   public WrongAttempts: number[];
-
-
+  public Expression: string;
+  
+  private Operands: Operand[];
   private OperandsGenerated: number[];
 
 
-  public Generate(): string {
+  /**
+   * Generates an expression to be displayed on screen. 
+   *
+   * @returns {string}
+   * @memberof Problem
+   */
+  public generateExpression(): string {
     let problem = "";
     let operands = this.OperandsGenerated;
     problem = operands.join(this.Operator);
@@ -32,22 +39,61 @@ export class Problem {
   }
 
 
-
+  /**
+   * Gets sum of all the operands. 
+   *
+   * @returns {number}
+   * @memberof Problem
+   */
   public getSum(): number {
-    const sum = this.OperandsGenerated.reduce(
-      function (a, b) {
-        return a + b
-      }, 0
-    );
+    const sum = this.OperandsGenerated.reduce((a, b) => a + b, 0);    
     return sum;
   }
 
 
+  /**
+   * Gets subraction. Makes the first operand be positive, and the rest negative operands.
+   *
+   * @returns {number}
+   * @memberof Problem
+   */
+  public getSubtraction(): number {   
+    let subtractionOperands = this.OperandsGenerated.map( (operand, index) => {  
+      let returnOperand: number;      
+      
+      // Let's keep the first operand (element in array), positive.
+      if (index === 0) {
+        returnOperand = operand;
+      }
+      // Let's flip the signs on the rest.
+      else {
+        returnOperand = operand - (operand * 2);
+      }        
+      return returnOperand;
+    });
+    
+    // Now let's add everything up. 
+    let subtraction = subtractionOperands.reduce((a, b) => a + b, 0);    
+    
+    return subtraction;
+    
+  }
+  
+  
+  /**
+   * Gets the answer using the proper arimetic function (get(), getSubtraction()). 
+   *
+   * @returns {(number | undefined)}
+   * @memberof Problem
+   */
   public getAnswer(): number | undefined {
     let answer: number | undefined;
     if (this.Operator === "+") {
       answer = this.getSum();
     }
+    else if (this.Operator === "-") {
+      answer = this.getSubtraction();
+    }    
     else {
       // something here.
     }

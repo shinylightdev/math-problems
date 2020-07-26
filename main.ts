@@ -1,27 +1,8 @@
-import { Utility } from './utility';
 import { Problem } from './models/Problem';
 import { Operand } from './models/Operand';
+import { ProblemSet } from 'models/ProblemSet';
 
 // import { Operand } from './operand';
-
-
-
-
-
-
-
-
-
-
-
-
-
-// Not sure if really need this. 
-// let options = new ProblemSetOptions(10, [new Operand(0, 10)]);
-// let y = (new ProblemSet(4, "+")).Generate();
-
-
-
 // console.log(y.Generate());
 // console.log(y);
 
@@ -37,16 +18,29 @@ import { Operand } from './models/Operand';
 //         );
         
 
-let p = new Problem(
-  "+", 
-  [
-    new Operand(1, 10), 
-    new Operand(1, 10),
-  ]
-);
+// let p = new Problem(
+//   "+", 
+//   [
+//     new Operand(1, 10), 
+//     new Operand(1, 10),    
+//   ]
+// );
         
         
-console.log(p);
+// console.log(p);
 
 
+// let s = new Problem(
+//   "-", 
+//   [
+//     new Operand(25, 100), 
+//     new Operand(1, 25),    
+//   ]
+// );
+
+// console.log(s);
+
+
+
+let x = new ProblemSet(3, "+");
 
