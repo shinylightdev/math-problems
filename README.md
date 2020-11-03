@@ -2,25 +2,6 @@
 
 Generates random addition and subtraction based on parameters.
 
-## Testing
-
-Currently tests are limited. Uses [Jasmine](https://jasmine.github.io/) to test. 
-
-Installing Jasmine for TypeScript:
-```bash
-# Global Jasmine installation 
-npm install -g jasmine
-
-# TypeScript Jasmine types
-npm install --save @types/jasmine
-```
-
-
-To run the tests:
-```bash
-npm test
-```
-
 ## Usage
 
 Let's import the following. 
@@ -55,6 +36,25 @@ console.log(p.getSubtraction());
 
 // Returns 7
 console.log(p.getSum());
+```
+
+## Testing
+
+Currently tests are limited. Uses [Jasmine](https://jasmine.github.io/) to test. 
+
+Installing Jasmine for TypeScript:
+```bash
+# Global Jasmine installation 
+npm install -g jasmine
+
+# TypeScript Jasmine types
+npm install --save @types/jasmine
+```
+
+
+To run the tests:
+```bash
+npm test
 ```
 
 ## Contributing
