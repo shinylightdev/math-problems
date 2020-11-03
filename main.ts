@@ -18,11 +18,19 @@ let p = new Problem(
         );
         
         
-// console.log(p.generateExpression());
-// console.log(p.getAnswer());
-// console.log(p.getSubtraction());
-// console.log(p.getSum());
+console.log(p.generateExpression());
+console.log(p.generateExpression());
+console.log(p.generateExpression());
+console.log(p.getAnswer());
+console.log(p.getSubtraction());
+console.log(p.getSum());
         
+
+
+
+
+
+
 
 // let p = new Problem(
 //   "+", 

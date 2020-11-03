@@ -1,15 +1,21 @@
 {
-  "name": "math-game",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "@types/node": "^14.0.22"
-  }
+    "name": "math-game",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "ts-node node_modules/jasmine/bin/jasmine"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "@types/node": "^14.0.22"
+    },
+    "devDependencies": {
+        "@types/jasmine": "^3.6.0",
+        "jasmine": "^3.6.3",
+        "ts-node": "^9.0.0",
+        "typescript": "^4.0.5"
+    }
 }
