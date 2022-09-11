@@ -19,6 +19,8 @@ pids
 # Bower dependency directory (https://bower.io/)
 bower_components
 
+build/
+
 # node-waf configuration
 .lock-wscript
 

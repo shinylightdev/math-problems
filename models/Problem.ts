@@ -46,10 +46,46 @@ export class Problem {
    * @memberof Problem
    */
   public getSum(): number {
+    // Using reduce() on array to get sum of entire list.
     const sum = this.OperandsGenerated.reduce((a, b) => a + b, 0);    
     return sum;
   }
 
+  /**
+   * Gets product of all the operands.
+   *
+   * @returns {number}
+   * @memberof Problem
+   */
+  public getProduct(): number {
+    
+    // We initialize (the param) to one so that the multiplication sequence
+    // stars with 0. If it was 0, then everything would be zero.
+    const product = this.OperandsGenerated.reduce((a, b) => a * b, 1);    
+    return product;
+  }
+  
+  
+  /**
+   * Attempts to get division of all operands. Divide in sequential 
+   * order. If denominator is zero, will return Infinity. If numerator and
+   * denominator are both 0, then will return NaN. Additionally, it returns 
+   * rounded to nearest 2 decimal.
+   *
+   * @returns {string}
+   * @memberof Problem
+   */
+  public getQuotient(): number {        
+      // We initialize (the param) to one so that the multiplication sequence
+      // stars with 0. If it was 0, then everything would be zero.
+      let quotient = this.OperandsGenerated.reduce((a, b) => a / b);
+      quotient = Math.round(
+                  (quotient + Number.EPSILON) * 100 // for more precision, use Number.EPSILON
+                ) / 100;                
+                    
+    return quotient;
+  }  
+  
 
   /**
    * Gets subraction. Makes the first operand be positive, and the rest negative operands.
